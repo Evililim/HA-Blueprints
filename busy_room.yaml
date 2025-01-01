@@ -15,7 +15,6 @@ blueprint:
         selector:
           area:
         name: Pièce
-        required: true
     doors:
         name: Portes (Ouverture)
         description: Capteurs ouverture des portes
