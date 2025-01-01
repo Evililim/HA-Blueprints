@@ -14,7 +14,6 @@ blueprint:
     room_name:
         selector:
           area:
-            multiple: false
         name: Pièce
         required: true
     doors:
