@@ -12,20 +12,19 @@ blueprint:
 
   input:
     room_name:
-        name: Pièce
         selector:
           area:
             multiple: false
         name: Pièce
         required: true
-    door_entity:
-      name: Portes (Ouverture)
-      description: Capteurs ouverture des portes
-      selector:
-        entity:
-          filter:
-            device_class: door
-            multiple: true
+    doors:
+        name: Portes (Ouverture)
+        description: Capteurs ouverture des portes
+        selector:
+            entity:
+              filter:
+                device_class: door
+                multiple: true
     door_motion_entity:
       name: Portes (Mouvement)
       description: Capteurs de mouvement au niveau des portes
