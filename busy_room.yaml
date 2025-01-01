@@ -1,4 +1,5 @@
-mode: restart
+mode: parallel
+max: 10
 blueprint:
   name: Busy Room 0.1
   source_url: https://github.com/Evililim/HA-Blueprints/blob/main/busy_room.yaml
@@ -7,18 +8,37 @@ blueprint:
   domain: automation
   author: Ev
   description: >-
-    Uniformisation de la gestion de la presence dans chaque piece via ce blueprint
+    Uniformisation de la gestion de la presence dans chaque pièce via ce blueprint.
 
   input:
+    room_name:
+        name: Pièce
+        selector:
+          area:
+            multiple: false
+        name: Pièce
+        required: true
     door_entity:
       name: Portes (Ouverture)
+      description: Capteurs ouverture des portes
       selector:
         entity:
           filter:
             device_class: door
+            multiple: true
     door_motion_entity:
       name: Portes (Mouvement)
+      description: Capteurs de mouvement au niveau des portes
       selector:
         entity:
           filter:
             device_class: motion
+            multiple: true
+    motion_entity:
+      name: Mouvement
+      description: Capteurs de mouvement dans la pièce
+      selector:
+        entity:
+          filter:
+            device_class: motion
+            multiple: true
