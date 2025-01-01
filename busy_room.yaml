@@ -1,0 +1,24 @@
+mode: restart
+blueprint:
+  name: Busy Room 0.1
+  source_url: https://github.com/Evililim/HA-Blueprints/blob/main/busy_room.yaml
+  homeassistant:
+    min_version: 2024.6.0
+  domain: automation
+  author: Ev
+  description: >-
+    Uniformisation de la gestion de la presence dans chaque piece via ce blueprint
+
+  input:
+    door_entity:
+      name: Portes (Ouverture)
+      selector:
+        entity:
+          filter:
+            device_class: door
+    door_motion_entity:
+      name: Portes (Mouvement)
+      selector:
+        entity:
+          filter:
+            device_class: motion
