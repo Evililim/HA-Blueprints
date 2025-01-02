@@ -12,6 +12,7 @@ blueprint:
 
   input:
     room_name:
+        name: Pièce
         selector:
             area:
     doors:
