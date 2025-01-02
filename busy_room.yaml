@@ -12,7 +12,8 @@ blueprint:
 
   input:
     room_name:
-        area:
+        selector:
+            area:
     doors:
         name: Portes (Ouverture)
         description: Capteurs ouverture des portes
