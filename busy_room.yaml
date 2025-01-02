@@ -11,28 +11,3 @@ blueprint:
     Uniformisation de la gestion de la presence dans chaque pièce via ce blueprint.
 
   input:
-    room_name:
-        name: Pièce
-        selector:
-            area:
-    doors:
-        name: Portes (Ouverture)
-        description: Capteurs ouverture des portes
-        selector:
-            entity:
-              filter:
-                device_class: door
-    door_motion_entity:
-      name: Portes (Mouvement)
-      description: Capteurs de mouvement au niveau des portes
-      selector:
-        entity:
-          filter:
-            device_class: motion
-    motion_entity:
-      name: Mouvement
-      description: Capteurs de mouvement dans la pièce
-      selector:
-        entity:
-          filter:
-            device_class: motion
